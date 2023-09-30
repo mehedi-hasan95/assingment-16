@@ -1,4 +1,5 @@
 import { getWorkList } from "@/lib/apiData";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +16,7 @@ const WorkList = async () => {
                         We provide the Perfect Solution to your business growth
                     </h2>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-16 lg:mt-20 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-16 lg:mt-20 gap-6 md:gap-10 lg:gap-16">
                     {data.map((item) => (
                         <div key={data.id}>
                             <div className="bg-[#D7F5DC] rounded-2xl p-5 max-w-max mb-5">
@@ -36,9 +37,9 @@ const WorkList = async () => {
                                 </p>
                                 <Link
                                     href="#"
-                                    className="flex gap-3 items-center mt-16"
+                                    className="flex gap-2 items-center mt-16"
                                 >
-                                    Learn More <img src="/arrow.png" alt="" />
+                                    Learn More <ArrowRight size={24} />
                                 </Link>
                             </div>
                         </div>

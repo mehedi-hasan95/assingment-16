@@ -23,5 +23,15 @@
         "id": "5",
         "name": "testimonials",
         "url": "/testimonials"
+    },
+    {
+        "id": "7",
+        "name": "log in",
+        "url": "/login"
+    },
+    {
+        "id": "5",
+        "name": "register",
+        "url": "/register"
     }
 ]
