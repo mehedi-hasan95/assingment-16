@@ -47,3 +47,13 @@ export async function getFeaturedProject() {
 
     return res.json();
 }
+
+export async function getTeamList() {
+    const res = await fetch(process.env.BASE_URL + "TeamList");
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}

@@ -1,10 +1,10 @@
-import Footer from "./components/Footer";
-import NavMenu from "./components/NavMenu";
-import Subscribe from "./components/Subscribe";
+import NavMenu from "@/components/NavMenu";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import Subscribe from "@/components/Subscribe";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
     title: "Create Next App",
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={poppins.className}>
                 <NavMenu />
                 {children}
                 <Subscribe />
