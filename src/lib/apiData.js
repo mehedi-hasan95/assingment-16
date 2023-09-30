@@ -57,3 +57,33 @@ export async function getTeamList() {
 
     return res.json();
 }
+
+export async function getAllService() {
+    const res = await fetch(process.env.BASE_URL + "AllService");
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}
+
+export async function getAllProject() {
+    const res = await fetch(process.env.BASE_URL + "AllProject");
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}
+
+export async function getTestimonialList() {
+    const res = await fetch(process.env.BASE_URL + "TestimonialList");
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}
