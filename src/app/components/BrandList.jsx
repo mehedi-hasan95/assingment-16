@@ -4,7 +4,7 @@ import Image from "next/image";
 const BrandList = async () => {
     const data = await getBrandList();
     return (
-        <div>
+        <div className="bg-white">
             <div className="container mx-auto flex md:justify-between py-8 px-4 flex-wrap gap-10">
                 {data.map((item) => (
                     <Image

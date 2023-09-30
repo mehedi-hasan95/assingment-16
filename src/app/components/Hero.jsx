@@ -1,10 +1,11 @@
 import { getHeroData } from "@/lib/apiData";
 import Image from "next/image";
+import BrandList from "./BrandList";
 const Hero = async () => {
     const data = await getHeroData();
     return (
         <div className="bg-[#D7F5DC] py-10">
-            <div className="container mx-auto p-4 flex gap-10 font-poppins flex-col md:flex-row items-center">
+            <div className="container mx-auto p-4 flex gap-10 font-poppins flex-col md:flex-row items-center pb-16">
                 <div className="md:w-2/5">
                     <h1 className="font-bold text-5xl leading-[65px]">
                         {data.title}
@@ -51,6 +52,7 @@ const Hero = async () => {
                     </div>
                 </div>
             </div>
+            <BrandList />
         </div>
     );
 };
