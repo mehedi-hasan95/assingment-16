@@ -4,7 +4,7 @@ import Image from "next/image";
 const Testimonial = async () => {
     const data = await getTestimonialList();
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto px-4 pt-10 md:pt-16 lg:pt-20">
             <div>
                 <h4 className="text-[#20B15A] font-medium text-xl">
                     Testimonial List

@@ -5,7 +5,7 @@ import Link from "next/link";
 const AllProject = async () => {
     const data = await getAllProject();
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto px-4 pt-10 md:pt-16 lg:pt-20">
             <div>
                 <h4 className="text-[#20B15A] font-medium text-xl">
                     All Project

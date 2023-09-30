@@ -4,12 +4,17 @@ import { usePathname } from "next/navigation";
 import menuList from "@/utils/Menu.json";
 import { AlignLeft, X } from "lucide-react";
 import { useState } from "react";
+import Breadcrumb from "./Breadcrumb";
 
 const NavMenu = () => {
     const pathname = usePathname();
     const [activeMenu, setActiveMenu] = useState(false);
     return (
-        <div className={`${pathname === "/" ? "bg-[#D7F5DC]" : ""} py-5`}>
+        <div
+            className={`${
+                pathname === "/" ? "bg-[#D7F5DC]" : "bg-[#F8F9FC]"
+            } py-5`}
+        >
             <div className="container mx-auto p-4">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="text-black text-xl font-bold">
@@ -20,9 +25,9 @@ const NavMenu = () => {
                             <Link
                                 key={menu.id}
                                 href={menu.url}
-                                className={`capitalize font-medium text-black ${
+                                className={`capitalize font-medium text-black  ${
                                     pathname === menu.url
-                                        ? "text-green-500"
+                                        ? "text-green-500 font-extrabold"
                                         : ""
                                 }`}
                             >
@@ -55,6 +60,7 @@ const NavMenu = () => {
                         ))}
                     </div>
                 )}
+                {pathname === "/" ? "" : <Breadcrumb />}
             </div>
         </div>
     );
