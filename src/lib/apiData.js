@@ -27,3 +27,23 @@ export async function getWorkList() {
 
     return res.json();
 }
+
+export async function getStatList() {
+    const res = await fetch(process.env.BASE_URL + "StatList");
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}
+
+export async function getFeaturedProject() {
+    const res = await fetch(process.env.BASE_URL + "FeaturedProject");
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}
